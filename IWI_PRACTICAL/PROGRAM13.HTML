@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Functions and Scope</title>
+</head>
+
+<body>
+
+    <h2>User Defined Functions & Scope Demo</h2>
+    <p id="output"></p>
+
+    <script>
+        // Global scope
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+        // User-defined function
+        function showValues() {
+            // Function scope
+            var x = 5;
+            let y = 15;
+            const z = 25;
+
+            document.getElementById("output").innerHTML =
+                "Inside Function<br>" +
+                "a = " + a + "<br>" +
+                "b = " + b + "<br>" +
+                "c = " + c + "<br>" +
+                "x = " + x + "<br>" +
+                "y = " + y + "<br>" +
+                "z = " + z;
+        }
+
+        // Function invocation
+        showValues();
+
+        // Block scope demonstration
+        if (true) {
+            var m = 100;   // function/global scoped
+            let n = 200;   // block scoped
+            const o = 300; // block scoped
+
+            document.write("<br><br>Inside Block<br>");
+            document.write("m = " + m + "<br>");
+            document.write("n = " + n + "<br>");
+            document.write("o = " + o + "<br>");
+        }
+
+        document.write("<br>Outside Block<br>");
+        document.write("m = " + m + "<br>"); // Accessible
+
+        // The following lines will cause errors if uncommented
+        // document.write(n);
+        // document.write(o);
+    </script>
+
+</body>
+
+</html>

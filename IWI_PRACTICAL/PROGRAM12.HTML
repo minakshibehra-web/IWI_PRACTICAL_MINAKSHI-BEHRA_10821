@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Conditional & Loops</title>
+</head>
+
+<body>
+
+    <h2>Check Number (Conditional Statement)</h2>
+    <p id="condition"></p>
+
+    <script>
+        let number = 10;
+
+        // if-else condition
+        if (number > 0) {
+            document.getElementById("condition").innerHTML = "Number is Positive";
+        } else if (number < 0) {
+            document.getElementById("condition").innerHTML = "Number is Negative";
+        } else {
+            document.getElementById("condition").innerHTML = "Number is Zero";
+        }
+
+        // switch case
+        let day = 3;
+        switch (day) {
+            case 1:
+                document.write("Monday<br>");
+                break;
+            case 2:
+                document.write("Tuesday<br>");
+                break;
+            case 3:
+                document.write("Wednesday<br>");
+                break;
+            default:
+                document.write("Invalid day<br>");
+        }
+    </script>
+
+</body>
+
+</html>
+12TH

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Manipulation Demo</title>
+</head>
+
+<body>
+
+    <h2 id="title">DOM Manipulation Example</h2>
+
+    <p class="message">This is a paragraph.</p>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        // Using getElementById()
+        function changeText() {
+            document.getElementById("title").innerHTML = "Text Changed Successfully!";
+            alert("Heading text has been changed using getElementById()");
+        }
+
+        // Using querySelector()
+        function changeColor() {
+            document.querySelector(".message").style.color = "blue";
+            alert("Paragraph color changed using querySelector()");
+        }
+    </script>
+
+</body>
+
+</html>

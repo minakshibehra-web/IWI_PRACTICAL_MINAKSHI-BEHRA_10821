@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Element Manipulation</title>
+    <style>
+        .box {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>JavaScript Create & Manipulate Elements</h2>
+
+    <div id="container"></div>
+
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="modifyElement()">Modify Last Element</button>
+    <button onclick="removeElement()">Remove Last Element</button>
+
+    <script>
+        let count = 0;
+
+        // Create and append element
+        function addElement() {
+            let newDiv = document.createElement("div");   // create element
+            newDiv.className = "box";
+            newDiv.innerHTML = "Element " + (++count);
+
+            document.getElementById("container").appendChild(newDiv); // append
+            alert("New element added");
+        }
+
+        // Modify last child element
+        function modifyElement() {
+            let container = document.getElementById("container");
+
+            if (container.lastChild) {
+                container.lastChild.innerHTML = "Modified Element";
+                container.lastChild.style.backgroundColor = "lightgreen";
+                alert("Last element modified");
+            } else {
+                alert("No element to modify");
+            }
+        }
+
+        // Remove last child element
+        function removeElement() {
+            let container = document.getElementById("container");
+
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+                alert("Last element removed");
+            } else {
+                alert("No element to remove");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
